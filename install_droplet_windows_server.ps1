@@ -17,6 +17,8 @@ $port1.Name = 'SSH Port' # name of Port
 
 $port1.Enabled = $true
 
+$port1.RemoteAddresses = 10.0.0.0/8
+
 $fwMgr = New-Object -ComObject HNetCfg.FwMgr
 
 $profiledomain=$fwMgr.LocalPolicy.GetProfileByType(0)
@@ -30,6 +32,7 @@ New-VMSwitch -SwitchName "NATSwitch" -SwitchType Internal
 New-NetIPAddress -IPAddress 192.168.10.1 -PrefixLength 24 -InterfaceAlias "vEthernet (NATSwitch)"
 New-NetNAT -Name "NATNetwork" -InternalIPInterfaceAddressPrefix 192.168.10.0/24
 Add-NetNatStaticMapping -ExternalIPAddress "0.0.0.0/24" -ExternalPort 22 -Protocol TCP -InternalIPAddress "192.168.10.2" -InternalPort 22 -NatName NATNetwork
+#sunet: 192.168.10.0/24 address: 192.168.10.2 gateway: 192.168.10.1 name servers: 10.50.50.50, 10.50.10.50
 
 #==============================================================
 # VM AAD setup
