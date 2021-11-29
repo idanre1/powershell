@@ -3,11 +3,18 @@ Install-Module posh-git -Scope CurrentUser
 Install-Module Terminal-Icons -Scope CurrentUser
 Install-Module PSReadLine -AllowPrerelease
 
-#download nerdfont
-#https://www.nerdfonts.com/font-downloads
-#https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
+#download nerdfont (patched version)
+#https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts
+https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Meslo/M-DZ/Regular/complete/
 # msft fonts
 #https://github.com/microsoft/cascadia-code/releases?WT.mc_id=-blog-scottha
+# LG - Line Gap
+# L - Large
+# M - Medium
+# S - Small
+# DZ - Dotted Zero
+# SZ - Slashed Zero
+
 
 echo $Profile
 ########################
