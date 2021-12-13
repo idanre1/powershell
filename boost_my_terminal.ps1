@@ -15,8 +15,12 @@ Install-Module PSReadLine -AllowPrerelease
 # DZ - Dotted Zero
 # SZ - Slashed Zero
 
-mkdir %USERPROFILE%\Fonts
-Invoke-WebRequest -Uri "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/CascadiaCode/Regular/complete/Caskaydia%20Cove%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.otf?raw=true" -OutFile "%USERPROFILE%\Fonts/CascadiaCode.otf"
+mkdir $env:USERPROFILE\Fonts
+Set-Location -Path $env:USERPROFILE/Fonts
+Invoke-WebRequest -Uri "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/CascadiaCode/Regular/complete/Caskaydia%20Cove%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.otf?raw=true" -OutFile "$env:USERPROFILE/Fonts/CascadiaCode.otf"
+Invoke-WebRequest -Uri  "https://github.com/idanre1/powershell/raw/main/InstallFonts.ps1" -OutFile "$env:USERPROFILE/Fonts/InstallFonts.ps1"
+# Execute:
+$env:USERPROFILE\Fonts\InstallFonts.ps1
 
 ###########################
 # Edit profile
