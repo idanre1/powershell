@@ -8,6 +8,7 @@ Install-Module PSReadLine -AllowPrerelease
 # https://www.nerdfonts.com/
 # https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/CascadiaCode/Regular/complete
 # https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Meslo/M-DZ/Regular/complete/
+# https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/SourceCodePro/Regular/complete/
 # LG - Line Gap
 # L - Large
 # M - Medium
