@@ -39,6 +39,11 @@ Get-PnpDevice |
 pause
 
 #Dismount the Device from the Host
+# query pcie is running
+sc.exe query pcip
+
+# start pcie
+# sc.exe start pcip
 echo "Dismount the Device from the Host"
 Dismount-VMHostAssignableDevice -force -LocationPath $locationPath
 pause
